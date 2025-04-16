@@ -1,5 +1,7 @@
 package model;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Aluno {
 
     String nome;
@@ -12,6 +14,26 @@ public class Aluno {
         this.notas = notas;
     }
 
+    public Aluno() {
+
+    }
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
+
+
+
+
     public String getNome() {
         return nome;
     }
@@ -23,6 +45,9 @@ public class Aluno {
     public double [] getNotas() {
         return notas;
     }
+
+
+
 
     public double CalculaMediaNota() {
 
@@ -38,5 +63,16 @@ public class Aluno {
     public boolean aprovado(){
         return CalculaMediaNota() >= 7;
     }
+    public void ExibirDados() {
+
+        System.out.println("Nome " + nome);
+        System.out.println("Idade " + idade);
+        System.out.println("Média " + CalculaMediaNota());
+        System.out.println("Aprovado " + (aprovado() ? "Sim" : "Não"));
+
+    }
+
+
+
 }
 
